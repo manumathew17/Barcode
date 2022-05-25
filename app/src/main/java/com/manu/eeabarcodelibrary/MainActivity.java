@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         decoratedBarcodeView = findViewById(R.id.barcode_view);
         decoratedBarcodeView.resume();
-        decoratedBarcodeView.keyboardImage.setOnClickListener(new View.OnClickListener() {
+        decoratedBarcodeView.keyboardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.e("clicked", "use input");

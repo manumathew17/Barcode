@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,7 +38,9 @@ public class DecoratedBarcodeView extends FrameLayout {
     private BarcodeView barcodeView;
     private ViewfinderView viewFinder;
     private TextView statusView;
-    public ImageView keyboardImage;
+    public ImageButton keyboardButton;
+    private ImageButton flash_Btn;
+    private Boolean flashOn = false;
 
     /**
      * The instance of @link TorchListener to send events callback.
@@ -120,7 +123,22 @@ public class DecoratedBarcodeView extends FrameLayout {
 
         // statusView is optional
         statusView = findViewById(R.id.zxing_status_view);
-        keyboardImage = findViewById(R.id.image_keyboard);
+        keyboardButton = findViewById(R.id.btn_keyboard);
+        flash_Btn = findViewById(R.id.flash_btn);
+
+        flash_Btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                flashOn = !flashOn;
+                if(flashOn){
+                    setTorchOn();
+                }
+                else {
+                    setTorchOff();
+                }
+
+            }
+        });
 
 
     }
@@ -196,7 +214,8 @@ public class DecoratedBarcodeView extends FrameLayout {
             statusView.setText(text);
         }
     }
-    public void manualInput(){
+
+    public void manualInput() {
 
     }
 
@@ -252,6 +271,7 @@ public class DecoratedBarcodeView extends FrameLayout {
      */
     public void setTorchOn() {
         barcodeView.setTorch(true);
+        flash_Btn.setImageResource(R.drawable.ic_round_flashlight_off_24);
 
         if (torchListener != null) {
             torchListener.onTorchOn();
@@ -262,6 +282,7 @@ public class DecoratedBarcodeView extends FrameLayout {
      * Turn off the device's flashlight.
      */
     public void setTorchOff() {
+        flash_Btn.setImageResource(R.drawable.ic_round_flashlight_on_24);
         barcodeView.setTorch(false);
 
         if (torchListener != null) {
