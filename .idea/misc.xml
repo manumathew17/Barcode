@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/develops/EEaBarcodeLibrary/Barcode/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/develops/EEaBarcodeLibrary/Barcode/scanner/src/main/res/drawable/ic_round_flashlight_off_24.xml" value="0.1425" />
+        <entry key="..\:/develops/EEaBarcodeLibrary/Barcode/scanner/src/main/res/drawable/ic_round_keyboard_24.xml" value="0.1425" />
         <entry key="..\:/develops/EEaBarcodeLibrary/Barcode/scanner/src/main/res/layout/zxing_barcode_scanner.xml" value="0.1671875" />
         <entry key="..\:/develops/EEaBarcodeLibrary/Barcode/scanner/src/main/res/layout/zxing_capture.xml" value="0.1671875" />
         <entry key="..\:/develops/EEaBarcodeLibrary/app/src/main/res/layout/activity_main.xml" value="0.16145833333333334" />
