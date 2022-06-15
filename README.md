@@ -27,7 +27,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.manumathew17:Barcode:<latest verion>'
+    implementation 'com.github.manumathew17:Barcode:3.1.1'
 }
 ```
 
@@ -63,9 +63,8 @@ xml
 <com.manu.scanner.ee.barcodescanner.DecoratedBarcodeView
         android:id="@+id/barcode_scanner"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_below="@id/titlelayout"
-        android:layout_marginBottom="-20dp" />
+        android:layout_height="match_parent"
+  />
 ```
 
 In activity or fragment:
