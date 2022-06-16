@@ -153,7 +153,9 @@ barcodeView.keyboardButton.setOnClickListener(new View.OnClickListener() {
             manualInputDialog.show();
             }
         });
+```
 
+```
 xml code
 manual iput dialog layout
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -204,12 +206,7 @@ manual iput dialog layout
         android:textSize="16dp" />
 
 </LinearLayout>
-
-
 ```
-
-
-
 
 
 [1]: <https://github.com/journeyapps/zxing-android-embedded>
